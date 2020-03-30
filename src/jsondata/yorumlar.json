@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "product_name": "AAAA",
+        "fullname": "BBBBB",
+        "users_email": "CCC@DDD.com",
+        "comment_rate": 5,
+        "comment": "Ürün Çok kullanışlu, kaliteli, dizayn muhteşem..."
+    },
+    {
+        "id": 2,
+        "product_name": "Markut M7 V5.1",
+        "users_email": "ahmet@yigit.com",
+        "comment_rate": "4",
+        "comment": "ürün çok güzel harika  efsane"
+    },
+    {
+        "id": 3,
+        "product_name": "Markut M7 V5.1",
+        "users_email": "ahmet@yigit.com",
+        "comment_rate": "4",
+        "comment": "ürün çok güzel harika  efsane dgsdgsdgs"
+    },
+    {
+        "id": 4,
+        "product_name": "Markut M7 V5.1",
+        "users_email": "ahmet@yigit.com",
+        "comment_rate": "4",
+        "comment": "ürün çok güzel harika  efsane dgsdgsdgs"
+    },
+    {
+        "id": 5,
+        "product_name": "Tulpar T5 V14.1",
+        "fullname": "Ahmet Yiğit",
+        "users_email": "ahmet@yigit.com",
+        "comment_rate": "4",
+        "comment": "ürün çok güzel harika  efsane dgsdgsdgs"
+    },
+    {
+        "id": 6,
+        "product_name": "Tulpar T5 V14.1",
+        "fullname": "Ahmet Yiğit",
+        "users_email": "ahmet@yigit.com",
+        "comment_rate": "5",
+        "comment": "ürün çok güzel harika  efsane dgsdgsdgs bvbcbcbc"
+    }
+]

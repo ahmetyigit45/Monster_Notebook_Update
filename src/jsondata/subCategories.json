@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "categori_id":2,
+        "name":"ABRA",
+        "image_name":"abra.png",
+        "description":"Gerçek Oyun Severlere"
+    },
+    {
+        "id":2,
+        "categori_id":2,
+        "name":"TULPAR",
+        "image_name":"tulpar.png",
+        "description":"Muhteşem Oyun Deneyimi"
+    },
+    {
+        "id":3,
+        "categori_id":4,
+        "name":"HUMA",
+        "image_name":"huma.png",
+        "description":"En İyi İş Ortağınız"
+    },
+    {
+        "id":4,
+        "categori_id":5,
+        "name":"MARKUT",
+        "image_name":"markut.png",
+        "description":"Hayal Gücünün Sırılarını Zorlayın"
+    }
+]

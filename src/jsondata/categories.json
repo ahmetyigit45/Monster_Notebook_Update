@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"TÜM LAPTOPLAR"
+    },
+    {
+        "id":2,
+        "name":"OYUN BİLGİSAYARLARI"
+    },
+    {
+        "id":3,
+        "name":"OYUNCU EKİPMANLARI"
+    },
+    {
+        "id":4,
+        "name":"İŞ BİLGİSAYARLARI"
+    },
+    {
+        "id":5,
+        "name":"İŞ İSTASYONLARI"
+    }
+]
