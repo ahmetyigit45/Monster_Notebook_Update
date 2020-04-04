@@ -1,54 +1,55 @@
 <template>
-    <div class="menuHeader">
-      <ul>
-        <li>
-          <a href="#home">
-            <i class="fas fa-phone"></i>
-            <strong> 0 850 255 11 11</strong>
-          </a>
-        </li>
-        <li>
-          <a href="#home">
-            <i class="far fa-envelope"></i>
-            <strong> MESAJ GÖNDER</strong>
-          </a>
-        </li>
-        <li>
-          <a href="#home">
-            <i class="fas fa-map-marker-alt"></i>
-            <strong> MAĞAZALAR</strong>
-          </a>
-        </li>
-        <li style="border:0px;">
-          <a href="#home">
-            <i class="fas fa-tools"></i>
-            <strong> TEKNİK SERVİS</strong>
-          </a>
-        </li>
-        <li style="float:right">
-          <a href="#about" class="odeme">
-            <strong>HARİCİ ÖDEME</strong>
-          </a>
-          <a href="#about">
-            <i class="fas fa-search"></i>
-          </a>
-          <a href="#about">
-            <i class="far fa-user"></i>
-          </a>
-          <a class="active" href="#about">
-            <i class="fas fa-shopping-cart"></i>
-            <strong>SEPETİM</strong>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="menuHeader">
+    <ul>
+      <li>
+        <a href="#home">
+          <i class="fas fa-phone"></i>
+          <strong>0 850 255 11 11</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#home">
+          <i class="far fa-envelope"></i>
+          <strong>MESAJ GÖNDER</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#home">
+          <i class="fas fa-map-marker-alt"></i>
+          <strong>MAĞAZALAR</strong>
+        </a>
+      </li>
+      <li style="border:0px;">
+        <a href="#home">
+          <i class="fas fa-tools"></i>
+          <strong>TEKNİK SERVİS</strong>
+        </a>
+      </li>
+      <li style="float:right">
+        <a href="#about" class="odeme">
+          <strong>HARİCİ ÖDEME</strong>
+        </a>
+        <a href="#about">
+          <i class="fas fa-search"></i>
+        </a>
+
+        <router-link to="/login" tag="a" class="link">
+          <i class="far fa-user"></i>
+        </router-link>
+
+        <a class="active" href="#about">
+          <i class="fas fa-shopping-cart"></i>
+          <strong>SEPETİM</strong>
+        </a>
+      </li>
+    </ul>
+
+  </div>
 </template>
 
 <script>
-
 export default {
-  components: {
-  }
+  components: {}
 };
 </script>
 

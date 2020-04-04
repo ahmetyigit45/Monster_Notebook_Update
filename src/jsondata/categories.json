@@ -1,22 +1,36 @@
 [
     {
         "id":1,
-        "name":"TÜM LAPTOPLAR"
+        "name":"TÜM LAPTOPLAR",
+        "categori": "notebook",
+        "path":"tum_bilgisayarlar"
     },
     {
         "id":2,
-        "name":"OYUN BİLGİSAYARLARI"
+        "name":"OYUN BİLGİSAYARLARI",
+        "categori": "notebook" ,
+        "categori_id": 2,
+        "path":"oyun_bilgisayarlari"
     },
     {
         "id":3,
-        "name":"OYUNCU EKİPMANLARI"
+        "name":"OYUNCU EKİPMANLARI",
+        "categori": "aksesuar" ,
+        "categori_id": 3,
+        "path":"oyuncu_ekipmanlari"
     },
     {
         "id":4,
-        "name":"İŞ BİLGİSAYARLARI"
+        "name":"İŞ BİLGİSAYARLARI",
+        "categori": "notebook" ,
+        "categori_id": 4,
+        "path":"is_bilgisayarlari"
     },
     {
         "id":5,
-        "name":"İŞ İSTASYONLARI"
+        "name":"İŞ İSTASYONLARI",
+        "categori": "notebook" ,
+        "categori_id": 5,
+        "path":"is_istasyonlari"
     }
 ]

@@ -10,97 +10,36 @@
         <div class="col-8 text-center">
           <carousel
             :autoplay="false"
-            :loop="false"
-            :nav="true"
-            :dots="false"
-            :responsive="{0:{items:1,nav:true},600:{items:2,nav:true},1000:{items:4,nav:true}}"
-            :margin="5"
+            :loop="true"
+            :navigationEnabled="true"
+            :centerMode="true"
+            :perPage="4"
+            :scrollPerPage="false"
+            :navigationClickTargetSize="10"
+            :paginationSize="0"
+            :perPageCustom="[[350, 1],[650, 2], [1366, 3], [1550, 4]]"
           >
-            <!-- comment başlama  -->
-            <button>
-              <div class="custom-card">
-                <img src="@/assets/img/2080.png" alt="Denim Jeans" style="width:100%" />
-                <div class="pc-name">Huma H4 V3.1 14,0" İş Bilgisayarı</div>
-                <br />
-                <div class="comment-header">SÜPER BİŞİ BU</div>
-                <br />
-                <div class="comment-rate">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+            <slide v-for="(comment, index) in commentData" :key="index">
+              <!-- comment başlama  -->
+              <button>
+                <div class="custom-card">
+                  <img :src="comment.url" alt />
+                  <div class="pc-name">{{comment.product_name}}</div>
+                  <br />
+                  <div class="comment-header">{{comment.comment_header}}</div>
+                  <br />
+                  <div class="comment-rate">
+                    <span v-for="star in comment.comment_rate" :key="star" class="fa fa-star"></span>
+                  </div>
+                  <br />
+                  <div class="comment">
+                    <p>{{comment.comment}}</p>
+                  </div>
+                  <br />
+                  <div class="comment-user">{{comment.fullname}}</div>
                 </div>
-                <br />
-                <div class="comment">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non dicta consequatur reprehenderit nisi quos beatae provident quam quisquam vitae praesentium hic, explicabo odio impedit dolorem debitis enim quasi sed?</p>
-                </div>
-                <br />
-                <div class="comment-user"> AHmet YİĞİT</div>
-              </div>
-            </button>
-            <button>
-              <div class="custom-card">
-                <img src="@/assets/img/2080.png" alt="Denim Jeans" style="width:100%" />
-                <div class="pc-name">Huma H4 V3.1 14,0" İş Bilgisayarı</div>
-                <br />
-                <div class="comment-header">SÜPER BİŞİ BU</div>
-                <br />
-                <div class="comment-rate">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <br />
-                <div class="comment">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non dicta consequatur reprehenderit nisi quos beatae provident quam quisquam vitae praesentium hic, explicabo odio impedit dolorem debitis enim quasi sed?</p>
-                </div>
-                <br />
-                <div class="comment-user"> AHmet YİĞİT</div>
-              </div>
-            </button>
-            <button>
-              <div class="custom-card">
-                <img src="@/assets/img/2080.png" alt="Denim Jeans" style="width:100%" />
-                <div class="pc-name">Huma H4 V3.1 14,0" İş Bilgisayarı</div>
-                <br />
-                <div class="comment-header">SÜPER BİŞİ BU</div>
-                <br />
-                <div class="comment-rate">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <br />
-                <div class="comment">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non dicta consequatur reprehenderit nisi quos beatae provident quam quisquam vitae praesentium hic, explicabo odio impedit dolorem debitis enim quasi sed?</p>
-                </div>
-                <br />
-                <div class="comment-user"> AHmet YİĞİT</div>
-              </div>
-            </button>
-            <button>
-              <div class="custom-card">
-                <img src="@/assets/img/2080.png" alt="Denim Jeans" style="width:100%" />
-                <div class="pc-name">Huma H4 V3.1 14,0" İş Bilgisayarı</div>
-                <br />
-                <div class="comment-header">SÜPER BİŞİ BU</div>
-                <br />
-                <div class="comment-rate">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <br />
-                <div class="comment">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non dicta consequatur reprehenderit nisi quos beatae provident quam quisquam vitae praesentium hic, explicabo odio impedit dolorem debitis enim quasi sed?</p>
-                </div>
-                <br />
-                <div class="comment-user"> AHmet YİĞİT</div>
-              </div>
-            </button>
+              </button>
+            </slide>
             <!-- comment bitme  -->
           </carousel>
         </div>
@@ -111,14 +50,28 @@
 
 
 <script>
-import carousel from "vue-owl-carousel";
+import { Carousel, Slide } from "vue-carousel";
+import axios from "axios";
 
 export default {
-  components: { carousel }
+  components: { Carousel, Slide },
+  data() {
+    return {
+      commentData: []
+    };
+  },
+  mounted() {
+    axios.post("http://localhost:3000/yorumlar").then(response => {
+      this.commentData = response.data;
+    });
+  }
 };
 </script>
 
 <style scoped>
+.VueCarousel-navigation-button {
+  color: white !important;
+}
 .custom-card {
   background: #2a2b30;
   max-width: 300px;
@@ -130,6 +83,9 @@ export default {
 }
 .custom-card:hover {
   border: 1px solid chartreuse;
+}
+.custom-card img {
+  width: 250px;
 }
 
 .pc-name {
@@ -148,10 +104,10 @@ export default {
 }
 .comment {
   color: white;
-  font-size: 11pt;;
+  font-size: 11pt;
 }
-.comment-user{
-  color:grey;
-  font-weight: bold;;
+.comment-user {
+  color: grey;
+  font-weight: bold;
 }
 </style>

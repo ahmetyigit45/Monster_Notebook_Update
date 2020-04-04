@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "fullname": "req.bodyParser.firstname",
+        "email": "aaa@aaaaaaaaaaa.com",
+        "password": "123aaa4",
+        "telefon": "req.bodyParser.telefon"
+    },
+    {
+        "id": 2,
+        "fullname": "Ahmet Yiğit",
+        "email": "ahmet@yigit.com",
+        "password": "12345",
+        "telefon": "5346338027"
+    },
+    {
+        "id": 2,
+        "fullname": "Abdurrahman Kıllı",
+        "email": "ahmet@yigit.net",
+        "password": "12345",
+        "telefon": "5346338027"
+    }
+]

@@ -1,17 +1,21 @@
 <template>
     <v-content>
-      <homepage/>
+    <router-view></router-view>
+
     </v-content>
 </template>
 
 <script>
-import homepage from './views/Home';
+//import homepage from './views/ProductDetail';
+
+//import Header from '@/components/Header.vue';
 
 export default {
   name: 'App',
 
   components: {
-    homepage,
+    //homepage,
+    //Header,
   },
 
   data: () => ({

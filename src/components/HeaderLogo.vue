@@ -1,26 +1,28 @@
 <template>
   <div class="custom-navbar">
     <div class="custom-logo">
-      <router-link v-bind:to="'home'">
-        <img src="../assets/img/logo.png" alt />
+      <router-link v-bind:to="'/'">
+        <img src="../assets/img/logo-evdekal.gif" alt />
       </router-link>
     </div>
 
     <!--    Dropdown Başlangıç    -->
     <div class="custom-dropdown" style="float:right;">
-      <button v-for="item in kategoriler" :key="item.id" class="custom-dropbtn" id="${item.id}">
-        <strong>{{item.name}}</strong>
+      <button class="custom-dropbtn" v-for="item in Categories" :key="item.id" @mouseover="shownCategory = item">
+        <router-link :to="item.path">
+          <strong>{{item.name}}</strong>
         <i class="fa fa-caret-down"></i>
+        </router-link>
       </button>
 
       <div class="custom-content">
         <div class="productsCards">
           <div class="custom-card-categori">
             <ul class="tasarım">
-              <li v-for="item2 in AltKategoriler" :key="item2.id">
+              <li v-for="item2 in shownItems" :key="item2.id">
                 <a href>
-                  <img :src="require(`@/assets/img/${item2.image_name}`)" alt />
-                  <h3>{{item2.name}}</h3>
+                  <img :src="item2.image_name" alt />
+                  <h4>{{item2.name}}</h4>
                 </a>
               </li>
             </ul>
@@ -34,17 +36,34 @@
 
 
 <script>
-////import ModelCards from "@/components/divdiv.vue";
-import Categories from "@/jsondata/categories.json";
-import subCategories from "@/jsondata/subCategories.json";
+import axios from "axios";
 export default {
   data() {
     return {
-      kategoriler: Categories,
-      AltKategoriler: subCategories
+      Categories:[],
+      subCategories:[],
+      all_pc: null,
+      shownCategory: null,
+      shownItems: [],
     };
   },
-  components: {}
+  components: {},
+  watch: {
+    shownCategory(newValue){
+      if (newValue.categori_id) this.shownItems = this.subCategories.filter(item => item.categori === newValue.categori && item.categori_id === newValue.categori_id)
+      else this.shownItems = this.subCategories.filter(item => item.categori === newValue.categori)
+    }
+  },
+  mounted(){
+    axios.post("http://localhost:3000/category").then(response => {
+      this.Categories = response.data;
+      //console.log(this.Categories);
+    });
+    axios.post("http://localhost:3000/sub_category").then(response => {
+      this.subCategories = response.data;
+      //console.log(this.subCategories);
+    });
+  }
 };
 </script>
 
@@ -64,6 +83,7 @@ body {
   background: #15161a;
   font-family: Arial, Helvetica, sans-serif;
   height: 88px;
+  max-height: 88px;
 }
 
 .custom-navbar a {
@@ -98,6 +118,10 @@ body {
   font: inherit;
   margin: 0;
 }
+.custom-dropbtn :hover{
+  color:white;
+  text-decoration: none;
+}
 
 .custom-content {
   display: none;
@@ -107,8 +131,8 @@ body {
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  height: 250px;
-  margin-top: -21px;
+  height: 200px;
+  margin-top: -69px;
 }
 
 .custom-dropdown:hover .custom-content {
@@ -153,7 +177,7 @@ body {
 }
 
 .custom-card-categori img {
-  height: 150px;
+  height: 100px;
   margin: auto;
 }
 ul {
