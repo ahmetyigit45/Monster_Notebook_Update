@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "image_name":"slider3-img1.webp"
+    },
+    {
+        "id":2,
+        "image_name":"galery-img2.webp"
+    },
+    {
+        "id":3,
+        "image_name":"galery-img3.webp"
+    },
+    {
+        "id":4,
+        "image_name":"galery-img4.webp"
+    },
+    {
+        "id":5,
+        "image_name":"galery-img5.webp"
+    },
+    {
+        "id":6,
+        "image_name":"galery-img6.webp"
+    },
+    {
+        "id":7,
+        "image_name":"galery-img7.webp"
+    }
+]
