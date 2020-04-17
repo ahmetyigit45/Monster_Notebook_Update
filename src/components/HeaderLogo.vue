@@ -2,12 +2,12 @@
   <div class="custom-navbar">
     <div class="custom-logo">
       <router-link v-bind:to="'/'">
-        <img src="../assets/img/logo-evdekal.gif" alt />
+        <img class="image" src="../assets/img/logo-evdekal.gif" alt />
       </router-link>
     </div>
 
     <!--    Dropdown Başlangıç    -->
-    <div class="custom-dropdown" style="float:right;">
+    <div class="custom-dropdown">
       <button class="custom-dropbtn" v-for="item in Categories" :key="item.id" @mouseover="shownCategory = item">
         <router-link :to="item.path">
           <strong>{{item.name}}</strong>
@@ -77,46 +77,55 @@ export default {
 body {
   margin: 0;
 }
-
+.image{
+    width: 100%;
+    height: 100%;
+}
 .custom-navbar {
   overflow: hidden;
+  width: 100%;
   background: #15161a;
   font-family: Arial, Helvetica, sans-serif;
-  height: 88px;
-  max-height: 88px;
+  display: inline-block;
+  margin-bottom: -20px;
 }
 
 .custom-navbar a {
   float: left;
-  font-size: 16px;
+  width: 100%;
+  margin: auto;
+  font-size: 12px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
 .custom-logo {
   float: left;
-  padding: 0px 0px 0px 80px;
-  position: absolute;
-  z-index: 9999;
+  width:25%;
+  position: relative;
+  top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 999;
 }
 
 .custom-dropdown {
   float: left;
+  display: block;
+  width: 75%;
   overflow: hidden;
-  line-height: 80px;
+  line-height: 30px;
 }
 
 .custom-dropdown .custom-dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
+  font-size: 8px;
+  width: 20%;
   color: white;
-  padding: 14px 16px;
   background-color: inherit;
   font: inherit;
   margin: 0;
+  height: 90px;
 }
 .custom-dropbtn :hover{
   color:white;
@@ -132,7 +141,6 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   height: 200px;
-  margin-top: -69px;
 }
 
 .custom-dropdown:hover .custom-content {
@@ -167,13 +175,93 @@ body {
   display: table;
   clear: both;
 }
+li{
+  width: 14%;
+}
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    height: auto;
-  }
+@media screen and (max-width: 900px) {
+li{
+  font-size: 1vw;
+}
+.custom-card-categori img{
+  width: 100%;
+}
+h4{
+  font-size: 1.2vw !important;
+}
+.custom-navbar a {
+
+  font-size: 10px;
+}
+.image{
+    width: 70%;
+    height: 100%;
+}
+.custom-logo {
+  
+  width:100%;
+  position: relative;
+  top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.custom-dropdown {
+  float: left;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 30px;
+}
+
+.custom-dropdown .custom-dropbtn {
+  font-size: 80%;
+  width: 33%;
+  color: white;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+  height: 90px;
+}
+.custom-dropbtn :hover{
+  color:white;
+  text-decoration: none;
+}
+
+.custom-content {
+  display: none;
+  position: absolute;
+  background: #2a2b30;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  height: 150px;
+}
+
+.custom-dropdown:hover .custom-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 }
 
 .custom-card-categori img {
