@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "fullname": "Ahmet YİĞİT",
+        "email": "ahmetyigit92@gmail.com",
+        "password": "$2b$10$s9SGuzpLBxorwmo95Sb6Y.ZPNY0zYCklGtPX2fAMNusahRIj7UmEu",
+        "telefon": "05346338027"
+    },
+    {
+        "id": 2,
+        "fullname": "ali",
+        "email": "ali@gmail.com",
+        "password": "12345",
+        "telefon": "05346338027"
+    },
+    {
+        "id": 3,
+        "fullname": "tugay",
+        "email": "tugay@gmail.com",
+        "password": "19051903",
+        "telefon": "08503030500"
+    }
+]

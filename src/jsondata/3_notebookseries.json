@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "ABRA",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/abra.png?raw=true",
+        "description": "Gerçek Oyun Severlere"
+    },
+    {
+        "id": 2,
+        "name": "TULPAR",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/tulpar.png?raw=true",
+        "description": "Muhteşem Oyun Deneyimi"
+    },
+    {
+        "id": 4,
+        "name":"SEMRUK",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/semruk.png?raw=true",
+        "description":"Ulaşılmaz Güç ve Performans"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "MARKUT",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/markut.png?raw=true",
+        "description": "Hayal Gücünün Sırılarını Zorlayın"
+    }
+    ,
+    {
+        
+        "id": 5,
+        "name": "HUMA",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/huma.png?raw=true",
+        "description": "En İyi İş Ortağınız"
+    }
+]

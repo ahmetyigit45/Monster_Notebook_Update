@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "türü":"cpu",
+        "tags":"i7-9750H"
+    },
+    {
+        "id":2,
+        "türü":"cpu",
+        "tags":"i7-9700K"
+    },
+    {
+        "id":3,
+        "türü":"cpu",
+        "tags":"i9-9900K"
+    },
+    {
+        "id":4,
+        "türü":"cpu",
+        "tags":"i7-10750H"
+    },
+    {
+        "id":5,
+        "türü":"gpu",
+        "tags":"3GB GTX1050"
+    },
+    {
+        "id":6,
+        "türü":"gpu",
+        "tags":"4GB GTX1650 128-Bit"
+    },
+    {
+        "id":7,
+        "türü":"gpu",
+        "tags":"4GB GTX1650 Ti 128-Bit"
+    },
+    {
+        "id":8,
+        "türü":"gpu",
+        "tags":"6GB RTX2060 192-Bit"
+    },
+    {
+        "id":8,
+        "türü":"gpu",
+        "tags":"8GB RTX2080 256 Bit"
+    }
+]

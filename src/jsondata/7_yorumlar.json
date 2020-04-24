@@ -1,0 +1,52 @@
+[
+    {
+        "comment_id": 1,
+        "product_name": "Tulpar v14.1AAA",
+        "comment_header": "Manyak Bişi bu",
+        "comment_rate": 5,
+        "comment": "Ürün Çok kullanışlu, kaliteli, dizayn muhteşem...",
+        "fullname": "Ahmet YİĞİT",
+        "users_email": "ahmet@yigit.com",
+        "url": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/1650.png?raw=true"
+    },
+    {
+        "comment_id": 2,
+        "product_name": "Tulpar v15.1",
+        "comment_header": "Manyak Bişi bu",
+        "comment_rate": 2,
+        "comment": "Ürün Çok kullanışlu, kaliteli, dizayn muhteşem...",
+        "fullname": "AAAA BBBBB",
+        "users_email": "ahmet@yigit.com",
+        "url": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/2070.png?raw=true"
+    },
+    {
+        "comment_id": 3,
+        "product_name": "Tulpar v15.1",
+        "comment_header": "Manyak Bişi bu",
+        "comment_rate": 1,
+        "comment": "Ürün Çok kullanışlu, kaliteli, dizayn muhteşem...",
+        "fullname": "AAAA BBBBB",
+        "users_email": "ahmet@yigit.com",
+        "url": "https://i.hizliresim.com/qXnO6E.png"
+    },
+    {
+        "id": 4,
+        "product_name": "Abra A5 V15.4",
+        "comment_header": "İdare Eder",
+        "comment_rate": 5,
+        "comment": "ürün çok sert ve yavaş",
+        "fullname": "Abdurrahman Kıllı",
+        "users_email": "ahmet@yigit.net",
+        "url": "https://i.hizliresim.com/qXnO6E.png"
+    },
+    {
+        "id": 5,
+        "product_name": "Abra A5 V15.4",
+        "comment_header": "İdare Eder",
+        "comment_rate": 5,
+        "comment": "ürün çok sert ve yavaş",
+        "fullname": "Abdurrahman Kıllı",
+        "users_email": "ahmet@yigit.net",
+        "url": "https://i.hizliresim.com/qXnO6E.png"
+    }
+]

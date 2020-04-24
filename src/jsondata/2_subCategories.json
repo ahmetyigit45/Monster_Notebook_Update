@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "categori_id": 2,
+        "categori":"notebook",
+        "name": "ABRA SERİSİ",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/abra-menu.png?raw=true",
+        "description": "Gerçek Oyun Severlere"
+    },
+    {
+        "id": 2,
+        "categori_id": 2,
+        "categori":"notebook",
+        "name": "TULPAR SERİSİ",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/tulpar-menu.png?raw=true",
+        "description": "Muhteşem Oyun Deneyimi"
+    },
+    {
+        "id": 3,
+        "categori_id": 4,
+        "categori":"notebook",
+        "name": "HUMA SERİSİ",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/huma-menu.png?raw=true",
+        "description": "En İyi İş Ortağınız"
+    },
+    {
+        "id": 4,
+        "categori_id": 5,
+        "categori":"notebook",
+        "name": "MARKUT SERİSİ",
+        "image_name": "https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/master/src/assets/img/markut-menu.png?raw=true",
+        "description": "Hayal Gücünün Sırılarını Zorlayın"
+    }
+    ,
+    {
+        "id": 5,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Gaming Mouse",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/mouse.png?raw=true",
+        "description":"En iyi aim"
+    }
+    ,
+    {
+        "id": 6,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Gaming Mousepad",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/mousepad.png?raw=true",
+        "description":"En iyi aim"
+    }
+    ,
+    {
+        "id": 7,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Gaming Keyboard",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/keyboard.png?raw=true",
+        "description":"En iyi aim"
+    }
+    ,
+    {
+        "id": 8,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Gaming Headset",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/speaker.png?raw=true",
+        "description":"En iyi aim"
+    }
+    ,
+    {
+        "id": 9,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Virtual Reality",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/HTC.png?raw=true",
+        "description":"En iyi aim"
+    }
+    ,
+    {
+        "id": 10,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Laptop Çantası",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/bag.png?raw=true",
+        "description":"En iyi aim"
+    }
+    ,
+    {
+        "id": 11,
+        "categori_id":3,
+        "categori":"aksesuar",
+        "name":"Gamepad",
+        "image_name":"https://github.com/ahmetyigit45/Monster_Notebook_Update/blob/a38873bde807833b1ea21215a0431bd2cc994ab4/src/assets/img/game_equipment/gamepad.png?raw=true",
+        "description":"En iyi aim"
+    }
+]
