@@ -1,57 +1,95 @@
 <template>
   <div class="menuHeader">
-    <ul>
-      <li>
-        <a href="#home">
-          <i class="fas fa-phone"></i>
-          <strong>0 850 255 11 11</strong>
-        </a>
-      </li>
-      <li>
-        <a href="#home">
-          <i class="far fa-envelope"></i>
-          <strong>MESAJ GÖNDER</strong>
-        </a>
-      </li>
-      <li>
-        <a href="#home">
-          <i class="fas fa-map-marker-alt"></i>
-          <strong>MAĞAZALAR</strong>
-        </a>
-      </li>
-      <li style="border:0px;">
-        <a href="#home">
-          <i class="fas fa-tools"></i>
-          <strong>TEKNİK SERVİS</strong>
-        </a>
-      </li>
-      <li style="float:right">
-        <a href="#about" class="odeme">
-          <strong>HARİCİ ÖDEME</strong>
-        </a>
-        <a href="#about">
-          <i class="fas fa-search"></i>
-        </a>
+    <div>
+      <b-navbar
+        toggleable="lg"
+        type="dark"
+        style="background: #2a2b30; margin:0px !important; display: inline;"
+      >
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-        <router-link to="/login" tag="a" class="link">
-          <i class="far fa-user"></i>
-        </router-link>
+        <b-collapse id="nav-collapse" is-nav style="display: block !important;">
+          <b-navbar-nav id="nav-left">
+            <b-navbar-brand class="navbar-left" href="#">
+              <i class="fas fa-phone text-light"></i> 0 850 255 11
+              11</b-navbar-brand
+            >
+            <b-navbar-brand class="navbar-left" href="#"
+              ><i class="far fa-envelope text-light"></i> MESAJ
+              GÖNDER</b-navbar-brand
+            >
+            <b-navbar-brand class="navbar-left" href="#"
+              ><i class="fas fa-map-marker-alt text-light"></i>
+              MAĞAZALAR</b-navbar-brand
+            >
+            <b-navbar-brand class="navbar-left" href="#"
+              ><i class="fas fa-tools text-light"></i>TEKNİK
+              SERVİS</b-navbar-brand
+            >
+          </b-navbar-nav>
 
-        <a class="active" href="#about">
-          <i class="fas fa-shopping-cart"></i>
-          <strong>SEPETİM</strong>
-        </a>
-      </li>
-    </ul>
-
+          <!-- Right aligned nav items -->
+          <b-navbar-nav class="ml-auto">
+            <b-navbar-nav>
+              <b-navbar-brand
+                class="navbar-right"
+                style="color: #26df2e;"
+                href="#"
+              >
+                HARİCİ ÖDEME</b-navbar-brand
+              >
+              <b-navbar-brand class="navbar-right" href="#"
+                ><i class="fas fa-search"></i
+              ></b-navbar-brand>
+              <b-navbar-brand class="navbar-right" href="#"
+                ><i class="far fa-user"></i
+              ></b-navbar-brand>
+              <b-navbar-brand
+                class="navbar-right"
+                style="background: #26df2e;"
+                href="/basket"
+                ><i class="fas fa-shopping-cart"></i> SEPETİM</b-navbar-brand
+              >
+            </b-navbar-nav>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  components: {}
+  data() {
+    return {
+      Categories:[],
+      subCategories:[],
+      all_pc: null,
+      shownCategory: null,
+      shownItems: [],
+    };
+  },
+  components: {},
+  watch: {
+  shownCategory(newValue){
+      if (newValue.categori_id) this.shownItems = this.subCategories.filter(item => item.categori === newValue.categori && item.categori_id === newValue.categori_id)
+      else this.shownItems = this.subCategories.filter(item => item.categori === newValue.categori)
+    }
+  },
+  mounted(){
+    axios.post("http://localhost:3000/category").then(response => {
+      this.Categories = response.data;
+      //console.log(this.Categories);
+    });
+    axios.post("http://localhost:3000/sub_category").then(response => {
+      this.subCategories = response.data;
+      //console.log(this.subCategories);
+    });
+  }
 };
 </script>
+
 
 <style>
 body {
@@ -60,7 +98,23 @@ body {
   color: white;
   font-weight: bold;
 }
-
+.navbar {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.navbar-brand {
+  margin-right: 0px !important;
+}
+.navbar-left {
+  border-right: 1px solid black;
+  font-weight: 800;
+  font-style: sbold;
+}
+.navbar-right {
+  font-weight: 800;
+  font-style: sbold;
+  font-size: 16px;
+}
 .odeme {
   color: orange !important;
 }
@@ -70,6 +124,7 @@ body {
   position: relative;
   top: 0;
   width: 100%;
+  line-height: 0px ;
 }
 
 .menuHeader a {
@@ -105,4 +160,5 @@ body {
 .active {
   background-color: orange;
 }
+
 </style>
