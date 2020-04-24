@@ -4,10 +4,20 @@
 ```
 npm install
 ```
+## install nodemon for server.js
+```
+npm install nodemon
+```
 
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+```
+### run nodemon with server.js
+```
+cd src
+
+nodemon .\server.js
 ```
 
 ### Compiles and minifies for production
