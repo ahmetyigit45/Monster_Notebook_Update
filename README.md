@@ -4,7 +4,7 @@
 ```
 npm install
 ```
-## intall nodemon for server.js
+## install nodemon for server.js
 ```
 npm install nodemon
 ```
